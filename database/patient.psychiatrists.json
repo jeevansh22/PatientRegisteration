@@ -1,0 +1,100 @@
+[{
+  "_id": 1,
+  "name": "Dr. Smith",
+  "hospitalId": 1
+},
+{
+  "_id": 2,
+  "name": "Dr. Johnson",
+  "hospitalId": 1
+},
+{
+  "_id": 3,
+  "name": "Dr. Williams",
+  "hospitalId": 2
+},
+{
+  "_id": 4,
+  "name": "Dr. Brown",
+  "hospitalId": 2
+},
+{
+  "_id": 5,
+  "name": "Dr. Jones",
+  "hospitalId": 3
+},
+{
+  "_id": 6,
+  "name": "Dr. Garcia",
+  "hospitalId": 3
+},
+{
+  "_id": 7,
+  "name": "Dr. Martinez",
+  "hospitalId": 4
+},
+{
+  "_id": 8,
+  "name": "Dr. Hernandez",
+  "hospitalId": 4
+},
+{
+  "_id": 9,
+  "name": "Dr. Gonzalez",
+  "hospitalId": 3
+},
+{
+  "_id": 10,
+  "name": "Dr. Wilson",
+  "hospitalId": 1
+},
+{
+  "_id": 11,
+  "name": "Dr. Anderson",
+  "hospitalId": 6
+},
+{
+  "_id": 12,
+  "name": "Dr. Taylor",
+  "hospitalId": 4
+},
+{
+  "_id": 13,
+  "name": "Dr. Thomas",
+  "hospitalId": 1
+},
+{
+  "_id": 14,
+  "name": "Dr. Moore",
+  "hospitalId": 2
+},
+{
+  "_id": 15,
+  "name": "Dr. Jackson",
+  "hospitalId": 2
+},
+{
+  "_id": 16,
+  "name": "Dr. White",
+  "hospitalId": 2
+},
+{
+  "_id": 17,
+  "name": "Dr. Harris",
+  "hospitalId": 1
+},
+{
+  "_id": 18,
+  "name": "Dr. Martin",
+  "hospitalId": 3
+},
+{
+  "_id": 19,
+  "name": "Dr. Thompson",
+  "hospitalId": 4
+},
+{
+  "_id": 20,
+  "name": "Dr. Garcia",
+  "hospitalId": 2
+}]
