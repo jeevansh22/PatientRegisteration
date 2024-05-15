@@ -8,7 +8,6 @@ mongoose.connect('mongodb://localhost:27017/patient', { useNewUrlParser: true, u
     .then(() => console.log('MongoDB connected...'))
     .catch(err => console.log(err));
 
-// Define the schemas
 const patientSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -42,14 +41,14 @@ const patientSchema = new mongoose.Schema({
         required: true,
     },
     psychiatristId: {
-        type: mongoose.Schema.Types.Number, // Change the type to Number
+        type: mongoose.Schema.Types.Number,
         required: true,
         ref: 'Psychiatrist'
     }
 });
 
 const psychiatristSchema = new mongoose.Schema({
-    _id: Number, // Define _id explicitly as Number
+    _id: Number, 
     name: String,
     hospitalId: Number
 });
@@ -63,13 +62,10 @@ const hospitals = [
     { id: 4, name: "AIIMS - All India Institute Of Medical Science" }
 ];
 
-// Middleware
-// Middleware
 app.use(bodyParser.json());
 
-// API endpoint for new patient registration
 app.post('/register-patient', async (req, res) => {
-    console.log("Request body:", req.body); // Log the entire request body to see what's being sent
+    console.log("Request body:", req.body);
 
     const { name, address, email, phoneNumber, password, patientPhoto, psychiatristId } = req.body;
 console.log(name, address, email, phoneNumber, password, patientPhoto, psychiatristId )
@@ -91,7 +87,6 @@ console.log(name, address, email, phoneNumber, password, patientPhoto, psychiatr
     }
 
     try {
-        // Check if the provided psychiatristId exists in the database
         const psychiatrist = await Psychiatrist.findOne({ _id: psychiatristId });
         console.log(psychiatrist)
         if (!psychiatrist) {
@@ -106,8 +101,6 @@ console.log(name, address, email, phoneNumber, password, patientPhoto, psychiatr
     }
 });
 
-
-// API endpoint to get psychiatrists by hospital ID
 app.get('/hospital-psychiatrists', async (req, res) => {
     const { hospitalId } = req.body;
     
@@ -147,7 +140,6 @@ app.get('/hospital-psychiatrists', async (req, res) => {
     }
 });
 
-// Validation functions
 function validateEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
@@ -162,7 +154,6 @@ function validatePassword(password) {
     return re.test(password);
 }
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
